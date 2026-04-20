@@ -16,7 +16,7 @@
       <a class="brand" href="https://ai-ei.org" target="_blank" rel="noopener">
         <div>
           <div class="brandName">AIEI</div>
-          <div class="brandSub">AI Ethics Institute Europe</div>
+          <div class="brandSub">AI Ethics and Integrity International Association</div>
         </div>
       </a>
 
@@ -86,7 +86,7 @@
         <div class="cardHead">
           <div>
             <p class="cardTitle">About AIEI</p>
-            <p class="cardSub">AI Ethics Institute Europe — supporting responsible AI adoption</p>
+            <p class="cardSub">AI Ethics and Integrity International Association — supporting responsible AI adoption</p>
           </div>
           <span class="badge badge-blue">Non-profit</span>
         </div>
@@ -146,7 +146,7 @@
 
     <div class="footer">
       <p>
-        &copy; <?= date('Y') ?> <a href="https://ai-ei.org" target="_blank" rel="noopener">AIEI — AI Ethics Institute Europe</a> ·
+        &copy; <?= date('Y') ?> <a href="https://ai-ei.org" target="_blank" rel="noopener">AIEI — AI Ethics and Integrity International Association</a> ·
         <a href="mailto:info@ai-ei.org">info@ai-ei.org</a> ·
         <span>Self-assessment tool · Not legal advice</span>
       </p>

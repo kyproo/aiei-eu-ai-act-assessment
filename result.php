@@ -43,7 +43,7 @@ function render_shell($title, $bodyHtml) {
 
       <div class="footer">
         <p>
-          &copy; <?= date('Y') ?> <a href="https://ai-ei.org" target="_blank" rel="noopener">AIEI — AI Ethics Institute Europe</a> ·
+          &copy; <?= date('Y') ?> <a href="https://ai-ei.org" target="_blank" rel="noopener">AIEI — AI Ethics and Integrity International Association</a> ·
           Self-assessment only · Not legal advice · Not a certification
         </p>
       </div>
@@ -263,7 +263,7 @@ $aiData = [
       "weight" => $g['w'],
     ];
   }, $topGaps),
-  "aiei_positioning" => "AIEI (AI Ethics Institute Europe) can help with EU AI Act compliance through membership resources, community of practice, guidance tools, training, and connections to expert practitioners.",
+  "aiei_positioning" => "AIEI (AI Ethics and Integrity International Association) can help with EU AI Act compliance through membership resources, community of practice, guidance tools, training, and connections to expert practitioners.",
 ];
 
 /* ================== RENDER PAGE ================== */

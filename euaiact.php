@@ -225,7 +225,7 @@ function h($v){ return htmlspecialchars((string)$v, ENT_QUOTES, 'UTF-8'); }
 
     <div class="footer">
       <p>
-        &copy; <?= date('Y') ?> <a href="https://ai-ei.org" target="_blank" rel="noopener">AIEI — AI Ethics Institute Europe</a> ·
+        &copy; <?= date('Y') ?> <a href="https://ai-ei.org" target="_blank" rel="noopener">AIEI — AI Ethics and Integrity International Association</a> ·
         <a href="index.php">← Back to home</a>
       </p>
     </div>
