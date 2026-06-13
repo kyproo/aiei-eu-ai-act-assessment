@@ -15,6 +15,7 @@
 </head>
 <body>
   <div class="wrap">
+
     <header class="topbar" role="banner">
       <a class="brand" href="https://ai-ei.org" target="_blank" rel="noopener" aria-label="AIEI — AI Ethics and Integrity International Association">
         <img class="brandLogo" src="https://ai-ei.org/wp-content/uploads/2024/01/AIEI-logo.png" alt="AIEI logo" onerror="this.style.display='none'">
@@ -28,7 +29,10 @@
         <a class="btn btnNavy" href="euaiact.php">Start Assessment →</a>
       </nav>
     </header>
+
     <main>
+
+      <!-- HERO -->
       <section class="hero" aria-labelledby="hero-heading">
         <div class="heroBadge">🇪🇺 EU AI Act · Free Tool · 10–15 min</div>
         <h1 id="hero-heading">EU AI Act Readiness Assessment</h1>
@@ -36,7 +40,10 @@
         <a class="btn btnPrimary heroCta" href="euaiact.php">Start EU AI Act Assessment →</a>
         <p class="disclaimer">Disclaimer: This tool provides a self-assessment only. It is not legal advice, an audit opinion, or certification. For formal compliance verification, consult a qualified legal or technical expert.</p>
       </section>
+
+      <!-- TWO CARDS -->
       <div class="grid2">
+
         <article class="card">
           <div class="cardHead">
             <div>
@@ -68,6 +75,7 @@
           </div>
           <p class="small" style="margin-top: 10px;">Takes approximately 10–15 minutes. No registration required.</p>
         </article>
+
         <article class="card">
           <div class="cardHead">
             <div>
@@ -93,7 +101,10 @@
           </div>
           <p class="small" style="margin-top: 10px;">AIEI is a non-profit organisation. This tool is provided free of charge to support EU AI Act awareness.</p>
         </article>
+
       </div>
+
+      <!-- TIMELINE -->
       <section class="timelineSection" aria-labelledby="timeline-heading">
         <div class="timelineHeader">
           <h3 id="timeline-heading">EU AI Act — Key Dates</h3>
@@ -125,10 +136,13 @@
           </div>
         </div>
       </section>
+
     </main>
+
     <footer class="footer" role="contentinfo">
       <p>&copy; <?= date('Y') ?> <a href="https://ai-ei.org" target="_blank" rel="noopener">AIEI — AI Ethics and Integrity International Association</a> · <a href="mailto:info@ai-ei.org">info@ai-ei.org</a> · Self-assessment tool · Not legal advice</p>
     </footer>
+
   </div>
 </body>
 </html>
