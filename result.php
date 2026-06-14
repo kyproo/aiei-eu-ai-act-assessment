@@ -27,12 +27,11 @@ function render_shell($title, $bodyHtml) {
     <div class="wrap">
 
       <header class="topbar">
-        <a class="brand" href="index.php">
-          <div>
-            <div class="brandName">AIEI</div>
-            <div class="brandSub">EU AI Act Assessment</div>
-          </div>
-        </a>
+        <a class="brand" href="https://ai-ei.org" target="_blank" rel="noopener" style="text-decoration: none;">
+            <svg width="76" height="30" viewBox="0 0 76 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 30L10.9392 0H21.547L32.3204 30H22.0442L17.1705 16.4929C16.8542 15.6164 15.6166 15.6107 15.2924 16.4844L10.2762 30H0ZM29.337 9.44751V0H38.9503V9.44751H29.337ZM38.9503 12.4309H29.337L29.4432 13.4774C30.1138 20.0878 33.5722 26.0983 38.9503 30V12.4309ZM41.768 0V30H63.6464V24.3646H51.3812V17.7348H60.9945V12.4309H51.3812V5.96685H63.6464V0H41.768ZM75.2495 4.80641C75.2495 7.3695 73.1717 9.4473 70.6087 9.4473C68.0456 9.4473 65.9678 7.3695 65.9678 4.80641C65.9678 2.24332 68.0456 0.165527 70.6087 0.165527C73.1717 0.165527 75.2495 2.24332 75.2495 4.80641ZM66.0138 9.77893H65.9678V29.9999H75.2495V9.77893H75.2024C74.2853 11.3643 72.5712 12.4309 70.6081 12.4309C68.6449 12.4309 66.9308 11.3643 66.0138 9.77893Z" fill="#151B22"/>
+            </svg>
+          </a>
         <div class="topRight">
           <a class="btn" href="index.php">← Home</a>
           <a class="btn btnPrimary" href="euaiact.php">Retake Assessment</a>
@@ -351,7 +350,7 @@ ob_start();
 <!-- AI Recommendations -->
 <div class="card" style="margin-bottom: 20px;">
   <h2>AI-Powered Recommendations</h2>
-  <p class="small">Generated from your answers using OpenAI. Self-assessment only — not legal advice or an audit.</p>
+  <p class="small">Generated from your answers using Anthropic. Self-assessment only — not legal advice or an audit.</p>
 
   <div id="aiLoader" class="loader">
     <span class="spinner"></span>
@@ -366,10 +365,11 @@ ob_start();
   <p class="small" style="margin: 0;">
     <?= $saveOk ? "✅ Submission recorded." : "ℹ️ Could not save submission locally (check /data directory permissions)." ?>
     &nbsp;·&nbsp;
-    Retake: <a href="euaiact.php">euaiact.php</a>
+    Want to<a href="euaiact.php"> retake</a>?
   </p>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>
   const payload = <?= json_encode($aiData, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?>;
 
@@ -390,10 +390,10 @@ ob_start();
     }
     return j.markdown || '';
   })
-  .then((md) => {
+    .then((md) => {
     loader.style.display = 'none';
     txtBox.style.display = 'block';
-    txtBox.textContent   = md;
+    txtBox.innerHTML = marked.parse(md);  // ← renders markdown as HTML
   })
   .catch((e) => {
     loader.style.display = 'none';

@@ -1,9 +1,7 @@
 <?php
 // config.php — AIEI EU AI Act Assessment
-// Set OPENAI_API_KEY as a server environment variable (recommended),
+// Set ANTHROPIC_API_KEY as a server environment variable (recommended),
 // or replace the placeholder below for testing.
-
-define('OPENAI_API_KEY', getenv('OPENAI_API_KEY') ?: 'PASTE_YOUR_OPENAI_KEY_HERE');
-define('OPENAI_MODEL', 'gpt-4o-mini');
-
+define('ANTHROPIC_API_KEY', getenv('ANTHROPIC_API_KEY') ?: 'YOUR PRIVATE KEY');
+define('ANTHROPIC_MODEL', 'claude-sonnet-4-6');
 define('OWNER_EMAIL', 'info@ai-ei.org');
